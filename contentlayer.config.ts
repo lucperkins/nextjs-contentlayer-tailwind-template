@@ -1,4 +1,8 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import {
+  LocalDocument,
+  defineDocumentType,
+  makeSource,
+} from "contentlayer/source-files";
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -7,6 +11,17 @@ export const Doc = defineDocumentType(() => ({
     title: {
       type: "string",
       required: true,
+    },
+  },
+  computedFields: {
+    path: {
+      type: "string",
+      resolve: (doc: LocalDocument) => `/${doc._raw.flattenedPath}`,
+    },
+    relativePath: {
+      type: "string",
+      resolve: (doc: LocalDocument) =>
+        doc._raw.flattenedPath.split("/").slice(1).join("/"),
     },
   },
 }));

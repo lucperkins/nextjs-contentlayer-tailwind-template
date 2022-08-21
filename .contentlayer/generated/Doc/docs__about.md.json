@@ -1,0 +1,16 @@
+{
+  "title": "About",
+  "body": {
+    "raw": "\nHere is the about page.",
+    "html": "<p>Here is the about page.</p>"
+  },
+  "_id": "docs/about.md",
+  "_raw": {
+    "sourceFilePath": "docs/about.md",
+    "sourceFileName": "about.md",
+    "sourceFileDir": "docs",
+    "contentType": "markdown",
+    "flattenedPath": "docs/about"
+  },
+  "type": "Doc"
+}

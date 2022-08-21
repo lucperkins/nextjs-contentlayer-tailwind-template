@@ -1,32 +1,19 @@
-import { ParsedUrlQuery } from "querystring";
-
 import { Doc, allDocs } from "contentlayer/generated";
+import { SegmentsParams, allDocPaths, getDoc } from "lib/content";
 import { GetStaticPaths, GetStaticProps } from "next";
-
-interface Params extends ParsedUrlQuery {
-  segments: string[];
-}
 
 type Props = {
   doc: NonNullable<ReturnType<typeof getDoc>>;
 };
 
-const arraysEqual = <T,>(a: T[], b: T[]): boolean =>
-  a.every((val, idx) => val === b[idx]);
-
-const getDoc = (segments: string[]): Doc | undefined => {
-  return allDocs.find((d) => arraysEqual(d.relativePath.split("/"), segments));
-};
-
-export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const paths: string[] = allDocs.map((d) => d.path);
+export const getStaticPaths: GetStaticPaths<SegmentsParams> = async () => {
   return {
-    paths,
+    paths: allDocPaths,
     fallback: false,
   };
 };
 
-export const getStaticProps: GetStaticProps<Props, Params> = async ({
+export const getStaticProps: GetStaticProps<Props, SegmentsParams> = async ({
   params,
 }) => {
   const { segments } = params!;

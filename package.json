@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "preview": "npm run export && http-server -o --port 3000 out"
   },
   "dependencies": {
     "next": "12.2.5",
@@ -23,6 +24,7 @@
     "contentlayer": "^0.2.7",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
+    "http-server": "^14.1.1",
     "next-contentlayer": "^0.2.7",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",

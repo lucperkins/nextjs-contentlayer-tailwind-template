@@ -36,8 +36,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 
 const DocPage = ({ doc }: Props) => {
   return (
-    <article>
-      <h1>{doc.title}</h1>
+    <article className="space-y-4">
+      <h1 className="text-3xl">{doc.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: doc.body.html }} />
     </article>
   );

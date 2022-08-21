@@ -8,12 +8,14 @@
     "build": "npm run clean && next build",
     "start": "npm run build && next start",
     "lint": "next lint",
-    "export": "npm run build && next export"
+    "export": "npm run build && next export",
+    "content": "contentlayer build"
   },
   "dependencies": {
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "typescript-array-utils": "^0.1.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",

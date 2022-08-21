@@ -1,11 +1,7 @@
-import { Post, allPosts } from "contentlayer/generated";
-import { SegmentsParams, allBlogPaths, getPost } from "lib/content";
+import { Post } from "contentlayer/generated";
+import { PostProps, SegmentsParams, allBlogPaths, getPost } from "lib/content";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
-
-type Props = {
-  post: NonNullable<ReturnType<typeof getPost>>;
-};
 
 export const getStaticPaths: GetStaticPaths<SegmentsParams> = async () => {
   return {
@@ -14,15 +10,16 @@ export const getStaticPaths: GetStaticPaths<SegmentsParams> = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props, SegmentsParams> = async ({
-  params,
-}) => {
+export const getStaticProps: GetStaticProps<
+  PostProps,
+  SegmentsParams
+> = async ({ params }) => {
   const { segments } = params!;
   const post: Post | undefined = getPost(segments);
   return post ? { props: { post } } : { notFound: true };
 };
 
-const DocPage = ({ post }: Props) => {
+const DocPage = ({ post }: PostProps) => {
   return (
     <article className="space-y-4">
       <h1 className="text-3xl">{post.title}</h1>

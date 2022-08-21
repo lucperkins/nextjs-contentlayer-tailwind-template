@@ -38,7 +38,16 @@ const getPost = (segments: string[]): Post | undefined =>
 
 const allBlogPaths: string[] = getPaths(allPosts);
 
+// Prop types
+type DocProps = {
+  doc: NonNullable<ReturnType<typeof getDoc>>;
+};
+
+type PostProps = {
+  post: NonNullable<ReturnType<typeof getPost>>;
+};
+
 // Exports
-export type { SegmentsParams };
+export type { SegmentsParams, DocProps, PostProps };
 
 export { getDoc, allDocPaths, getPost, allBlogPaths };

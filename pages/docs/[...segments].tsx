@@ -1,10 +1,6 @@
-import { Doc, allDocs } from "contentlayer/generated";
-import { SegmentsParams, allDocPaths, getDoc } from "lib/content";
+import { Doc } from "contentlayer/generated";
+import { DocProps, SegmentsParams, allDocPaths, getDoc } from "lib/content";
 import { GetStaticPaths, GetStaticProps } from "next";
-
-type Props = {
-  doc: NonNullable<ReturnType<typeof getDoc>>;
-};
 
 export const getStaticPaths: GetStaticPaths<SegmentsParams> = async () => {
   return {
@@ -13,7 +9,7 @@ export const getStaticPaths: GetStaticPaths<SegmentsParams> = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props, SegmentsParams> = async ({
+export const getStaticProps: GetStaticProps<DocProps, SegmentsParams> = async ({
   params,
 }) => {
   const { segments } = params!;
@@ -21,7 +17,7 @@ export const getStaticProps: GetStaticProps<Props, SegmentsParams> = async ({
   return doc ? { props: { doc } } : { notFound: true };
 };
 
-const DocPage = ({ doc }: Props) => {
+const DocPage = ({ doc }: DocProps) => {
   return (
     <article className="space-y-4">
       <h1 className="text-3xl">{doc.title}</h1>

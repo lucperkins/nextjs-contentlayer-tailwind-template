@@ -1,8 +1,9 @@
 import { NextPage } from "next";
-
-import { description, tagline } from "../site";
+import site from "site";
 
 const Index: NextPage = () => {
+  const { description, tagline } = site;
+
   return (
     <div className="space-y-1.5 md:space-y-2">
       <h1 className="text-3xl font-semibold tracking-tight">{tagline}</h1>

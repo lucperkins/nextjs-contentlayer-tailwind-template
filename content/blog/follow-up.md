@@ -1,5 +1,6 @@
 ---
 title: Second post
+description: And another one, folks
 tags: [some-other-stuff, intro]
 ---
 

@@ -1,19 +1,23 @@
+import Tags from "components/blog/tags/Tags";
 import { allTags } from "lib/content";
 import { NextPage } from "next";
-import Link from "next/link";
+import Head from "next/head";
+import site from "site";
 
 const Index: NextPage = () => {
+  const { title } = site;
+
   return (
-    <article className="space-y-4">
-      <h1 className="text-3xl">Tags</h1>
-      <ul>
-        {allTags.map((t) => (
-          <li key={t}>
-            <Link href={`./tags/${t}`}>{t}</Link>
-          </li>
-        ))}
-      </ul>
-    </article>
+    <>
+      <Head>
+        <title>Available tags &mdash; {title}</title>
+      </Head>
+
+      <article className="space-y-4">
+        <h1 className="text-3xl">Tags</h1>
+        <Tags tags={allTags} />
+      </article>
+    </>
   );
 };
 

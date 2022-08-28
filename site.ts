@@ -1,5 +1,17 @@
-const title = "Next.js + Contentlayer + Tailwind"
-const description = "A starter template for advanced content-driven websites"
-const tagline = "Welcome to Next.js + Contentlayer + Tailwind!"
+type Site = {
+  rootUrl: string;
+  title: string;
+  description: string;
+  tagline: string;
+  author: string;
+};
 
-export { title, description, tagline }
+const site: Site = {
+  rootUrl: "https://nextjs-contentlayer-tailwind-starter.dev",
+  title: "Next.js + Contentlayer + Tailwind",
+  description: "A starter template for advanced content-driven websites",
+  tagline: "Welcome to Next.js + Contentlayer + Tailwind!",
+  author: "Luc Perkins",
+};
+
+export default site;

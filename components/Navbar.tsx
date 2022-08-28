@@ -1,6 +1,5 @@
 import Link from "next/link";
-
-import { title } from "../site";
+import site from "site";
 
 type Link = {
   text: string;
@@ -16,6 +15,8 @@ const NavLink = ({ text, href }: Link) => {
 };
 
 const Navbar = () => {
+  const { title } = site;
+
   const links: Link[] = [
     { text: "Docs", href: "/docs" },
     { text: "Blog", href: "/blog" },

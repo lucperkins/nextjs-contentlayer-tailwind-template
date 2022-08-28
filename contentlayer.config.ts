@@ -1,10 +1,9 @@
 import {
   ComputedFields,
-  FieldDefs,
   LocalDocument,
   defineDocumentType,
   makeSource,
-} from "contentlayer/source-files"
+} from "contentlayer/source-files";
 
 const computedFields: ComputedFields = {
   path: {
@@ -16,7 +15,7 @@ const computedFields: ComputedFields = {
     resolve: (doc: LocalDocument) =>
       doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
-}
+};
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -28,7 +27,7 @@ export const Doc = defineDocumentType(() => ({
     },
   },
   computedFields,
-}))
+}));
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -47,9 +46,9 @@ export const Post = defineDocumentType(() => ({
     },
   },
   computedFields,
-}))
+}));
 
 export default makeSource({
   contentDirPath: "content",
   documentTypes: [Doc, Post],
-})
+});

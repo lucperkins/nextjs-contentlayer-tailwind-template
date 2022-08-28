@@ -1,22 +1,23 @@
-import { allDocs } from "contentlayer/generated"
-import Link from "next/link"
+import { allPosts } from "contentlayer/generated";
+import { NextPage } from "next";
+import Link from "next/link";
 
-const DocsIndex = () => {
+const Index: NextPage = () => {
   return (
     <article className="space-y-4">
-      <h1 className="text-3xl">Docs</h1>
+      <h1 className="text-3xl">Blog</h1>
 
       <ul>
-        {allDocs.map((doc) => (
-          <li key={doc._id}>
-            <Link href={doc.path}>
-              <a>{doc.title}</a>
+        {allPosts.map((post) => (
+          <li key={post._id}>
+            <Link href={post.path}>
+              <a>{post.title}</a>
             </Link>
           </li>
         ))}
       </ul>
     </article>
-  )
-}
+  );
+};
 
-export default DocsIndex
+export default Index;

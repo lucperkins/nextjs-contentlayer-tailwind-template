@@ -1,8 +1,8 @@
-import { Head, Html, Main, NextScript } from "next/document"
+import { Head, Html, Main, NextScript } from "next/document";
 
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
 
-type Props = {}
+type Props = {};
 
 const Document = ({}: Props) => {
   return (
@@ -15,7 +15,7 @@ const Document = ({}: Props) => {
         <NextScript />
       </body>
     </Html>
-  )
-}
+  );
+};
 
-export default Document
+export default Document;

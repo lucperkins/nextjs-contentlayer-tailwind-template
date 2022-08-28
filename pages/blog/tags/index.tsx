@@ -1,10 +1,8 @@
-import { allPosts } from "contentlayer/generated"
-import Link from "next/link"
-import { unique } from "typescript-array-utils"
+import { allTags } from "lib/content";
+import { NextPage } from "next";
+import Link from "next/link";
 
-const allTags = unique(allPosts.flatMap((p) => p.tags))
-
-const TagsIndex = () => {
+const Index: NextPage = () => {
   return (
     <article className="space-y-4">
       <h1 className="text-3xl">Tags</h1>
@@ -16,7 +14,7 @@ const TagsIndex = () => {
         ))}
       </ul>
     </article>
-  )
-}
+  );
+};
 
-export default TagsIndex
+export default Index;

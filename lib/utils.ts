@@ -1,3 +1,3 @@
-type Pass = { children: JSX.Element };
+type Pass = { children: JSX.Element }
 
-export type { Pass };
+export type { Pass }

@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import { title } from "../site";
+import { title } from "../site"
 
 const Navbar = () => {
   return (
@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href="/blog">Blog</Link>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

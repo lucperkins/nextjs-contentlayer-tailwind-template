@@ -1,8 +1,8 @@
-import { allPosts } from "contentlayer/generated";
-import Link from "next/link";
-import { unique } from "typescript-array-utils";
+import { allPosts } from "contentlayer/generated"
+import Link from "next/link"
+import { unique } from "typescript-array-utils"
 
-const allTags = unique(allPosts.flatMap((p) => p.tags));
+const allTags = unique(allPosts.flatMap((p) => p.tags))
 
 const TagsIndex = () => {
   return (
@@ -16,7 +16,7 @@ const TagsIndex = () => {
         ))}
       </ul>
     </article>
-  );
-};
+  )
+}
 
-export default TagsIndex;
+export default TagsIndex

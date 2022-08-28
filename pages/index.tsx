@@ -1,4 +1,4 @@
-import { description, tagline } from "../site";
+import { description, tagline } from "../site"
 
 const Index = () => {
   return (
@@ -6,7 +6,7 @@ const Index = () => {
       <h1 className="text-3xl font-semibold tracking-tight">{tagline}</h1>
       <h2 className="text-lg font-light">{description}</h2>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

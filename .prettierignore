@@ -1,0 +1,5 @@
+.contentlayer/
+.direnv/
+.next/
+node_modules/
+*.d.ts

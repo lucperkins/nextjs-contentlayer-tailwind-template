@@ -1,15 +1,14 @@
-import PostPage from "components/pages/PostPage";
+import PostPage from "components/pages/PostPage"
 import {
   PostProps,
   SegmentsParams,
   blogGetStaticPaths,
   blogGetStaticProps,
-} from "lib/content";
-import { GetStaticPaths, GetStaticProps } from "next";
+} from "lib/content"
+import { GetStaticPaths, GetStaticProps } from "next"
 
-export const getStaticPaths: GetStaticPaths<SegmentsParams> =
-  blogGetStaticPaths;
+export const getStaticPaths: GetStaticPaths<SegmentsParams> = blogGetStaticPaths
 export const getStaticProps: GetStaticProps<PostProps, SegmentsParams> =
-  blogGetStaticProps;
+  blogGetStaticProps
 
-export default PostPage;
+export default PostPage

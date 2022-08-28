@@ -1,4 +1,4 @@
-import { DocProps } from "lib/content";
+import { DocProps } from "lib/content"
 
 const DocPage = ({ doc }: DocProps) => {
   return (
@@ -6,7 +6,7 @@ const DocPage = ({ doc }: DocProps) => {
       <h1 className="text-3xl">{doc.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: doc.body.html }} />
     </article>
-  );
-};
+  )
+}
 
-export default DocPage;
+export default DocPage

@@ -1,5 +1,5 @@
-import { allDocs } from "contentlayer/generated";
-import Link from "next/link";
+import { allDocs } from "contentlayer/generated"
+import Link from "next/link"
 
 const DocsIndex = () => {
   return (
@@ -16,7 +16,7 @@ const DocsIndex = () => {
         ))}
       </ul>
     </article>
-  );
-};
+  )
+}
 
-export default DocsIndex;
+export default DocsIndex

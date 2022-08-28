@@ -1,5 +1,5 @@
-import { PostProps } from "lib/content";
-import Link from "next/link";
+import { PostProps } from "lib/content"
+import Link from "next/link"
 
 const PostPage = ({ post }: PostProps) => {
   return (
@@ -19,7 +19,7 @@ const PostPage = ({ post }: PostProps) => {
       )}
       <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
     </article>
-  );
-};
+  )
+}
 
-export default PostPage;
+export default PostPage

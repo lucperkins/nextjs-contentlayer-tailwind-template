@@ -1,16 +1,15 @@
-import DocPage from "components/pages/DocPage";
+import DocPage from "components/pages/DocPage"
 import {
   DocProps,
   SegmentsParams,
   docsGetStaticPaths,
   docsGetStaticProps,
-} from "lib/content";
-import { GetStaticPaths, GetStaticProps } from "next";
+} from "lib/content"
+import { GetStaticPaths, GetStaticProps } from "next"
 
-export const getStaticPaths: GetStaticPaths<SegmentsParams> =
-  docsGetStaticPaths;
+export const getStaticPaths: GetStaticPaths<SegmentsParams> = docsGetStaticPaths
 
 export const getStaticProps: GetStaticProps<DocProps, SegmentsParams> =
-  docsGetStaticProps;
+  docsGetStaticProps
 
-export default DocPage;
+export default DocPage

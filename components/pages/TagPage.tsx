@@ -1,9 +1,9 @@
-import { Post, allPosts } from "contentlayer/generated";
-import { TagProps } from "lib/content";
-import Link from "next/link";
+import { Post, allPosts } from "contentlayer/generated"
+import { TagProps } from "lib/content"
+import Link from "next/link"
 
 const TagPage = ({ tag }: TagProps) => {
-  const postsWithTag: Post[] = allPosts.filter((p) => p.tags.includes(tag));
+  const postsWithTag: Post[] = allPosts.filter((p) => p.tags.includes(tag))
 
   return (
     <article className="space-y-4">
@@ -20,7 +20,7 @@ const TagPage = ({ tag }: TagProps) => {
         ))}
       </ul>
     </article>
-  );
-};
+  )
+}
 
-export default TagPage;
+export default TagPage
